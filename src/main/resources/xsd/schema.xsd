@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema  xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://inforwise.co.tz/broker"
+            targetNamespace="http://inforwise.co.tz/broker" version="2.0">
+
+
+    <xs:element name= "mpesaBroker">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="request">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="serviceProvider">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="spId" type="xs:string"/>
+                                        <xs:element name="spPassword" type="xs:string"/>
+                                        <xs:element name="timestamp" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="transaction">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="amount" type="xs:string"/>
+                                        <xs:element name="comandId" type="xs:string"/>
+                                        <xs:element name="initiator" type="xs:string"/>
+                                        <xs:element name="originatorConversationID" type="xs:string"/>
+                                        <xs:element name="recipient" type="xs:string"/>
+                                        <xs:element name="mpesaReceipt" type="xs:string"/>
+                                        <xs:element name="transactionDate" type="xs:dateTime"/>
+                                        <xs:element name="accountReference" type="xs:string"/>
+                                        <xs:element name="transactionID" type="xs:string"/>
+                                        <xs:element name="conversationID" type="xs:string"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
